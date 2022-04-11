@@ -17,6 +17,7 @@ const configFileUpload = {
     //Requerimiento 3
     responseOnLimit: 'El archivo supera el peso limite permitido',
 };
+
 //INTEGRACIÓN MOTOR HANDLEBARS
 app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views', 'layouts'));
