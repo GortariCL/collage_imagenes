@@ -41,5 +41,7 @@ app.use('/css', express.static(path.join(__dirname, '..', '/node_modules/bootstr
 app.use('/js', express.static(path.join(__dirname, '..', '/node_modules/bootstrap/dist/js')));
 //Assets
 app.use('/assets', express.static(path.join(__dirname, '/assets')));
+//Imagenes
+app.use('/imgs', express.static(path.join(__dirname, '/imgs')));
 //ROUTES
 app.use(require('./routes'));
