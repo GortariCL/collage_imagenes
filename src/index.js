@@ -8,7 +8,6 @@ const port = 3000;
 
 //STARTING SERVER
 app.listen(port, console.log(`SERVER ON => ${port}`));
-
 //SETTINGS
 const configFileUpload = {
     //Requerimiento 2
@@ -17,11 +16,9 @@ const configFileUpload = {
     //Requerimiento 3
     responseOnLimit: 'El archivo supera el peso limite permitido',
 };
-
 //INTEGRACIÓN MOTOR HANDLEBARS
 app.set('view engine', 'handlebars');
 app.set('views', path.join(__dirname, 'views', 'layouts'));
-
 //CONFIGURACION HANDLEBARS
 app.engine(
     'handlebars',
@@ -31,7 +28,6 @@ app.engine(
         partialsDir: path.join(__dirname, 'views', 'components')
     })
 );
-
 //MIDDLEWARES
 app.use(expressFileUpload(configFileUpload));
 app.use('/files', express.static(path.join(__dirname, 'files')));
